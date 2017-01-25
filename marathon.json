@@ -1,0 +1,60 @@
+{
+  "volumes": null,
+  "id": "/smashing-dashboard",
+  "cmd": null,
+  "args": null,
+  "user": null,
+  "env": null,
+  "instances": 1,
+  "cpus": 1,
+  "mem": 512,
+  "disk": 0,
+  "gpus": 0,
+  "executor": null,
+  "constraints": null,
+  "fetch": null,
+  "storeUrls": null,
+  "backoffSeconds": 1,
+  "backoffFactor": 1.15,
+  "maxLaunchDelaySeconds": 3600,
+  "container": {
+    "docker": {
+      "image": "keithmcclellan/smashing_on_dcos”,
+      "forcePullImage": true,
+      "privileged": false,
+      "network": "HOST"
+    }
+  },
+  "healthChecks": [
+    {
+      "protocol": "HTTP",
+      "path": "/sample",
+      "gracePeriodSeconds": 300,
+      "intervalSeconds": 60,
+      "timeoutSeconds": 60,
+      "maxConsecutiveFailures": 5,
+      "ignoreHttp1xx": false
+    }
+  ],
+  "readinessChecks": null,
+  "dependencies": null,
+  "upgradeStrategy": {
+    "minimumHealthCapacity": 1,
+    "maximumOverCapacity": 1
+  },
+  "labels": {
+    "HAPROXY_GROUP": "external"
+  },
+  "acceptedResourceRoles": null,
+  "residency": null,
+  "secrets": null,
+  "taskKillGracePeriodSeconds": null,
+  "portDefinitions": [
+    {
+      "protocol": "tcp",
+      "port": 3030,
+      "name": "default"
+    }
+  ],
+  "requirePorts": false
+}
