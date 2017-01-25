@@ -1,10 +1,7 @@
-Based on Smashing Alpine Container - https://hub.docker.com/r/rgcamus/alpine_smashing
-
 # Smashing on DC/OS
 Run [Smashing](http://dashing.io/) in an [Alpine](https://alpinelinux.org/about/) [Docker](http://docker.io/) container on DC/OS.
 
-Based off: [keithmcclellan/smashing_on_dcos](https://registry.hub.docker.com/u/keithmcclellan/smashing_on_dcos/)
-
+Based on Smashing Alpine Container - https://hub.docker.com/r/rgcamus/alpine_smashing
 
 ## Build (optional)
 
