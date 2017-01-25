@@ -1,21 +1,4 @@
 # Note: change this to obtain your chart data from some external source
-
-require "kafka"
-
-kafka = Kafka.new(
- seed_brokers: ["broker.kafka.l4lb.thisdcos.directory:9092"],
- client_id: "tweeter-dashboard",
-)
-
-consumer = kafka.consumer(group_id: "tweet-consumer")
-
-consumer.subscribe("tweets")
-
-#consumer.each_message do |message|
-# puts message.topic, message,partition
-# puts message.offset, message.key, message.value
-#end
-
 labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July']
 data = [
   {

@@ -33,23 +33,22 @@ RUN cd /smashing 					\
     && rm -rf /var/cache/apk/*
 
 COPY run.sh /
-COPY dashboards/* /dashboards/
-COPY widgets/* /widgets/
-COPY jobs/* /jobs/
-COPY assets/* /assets/
-COPY public/* /public/
-COPY lib/* /lib-smashing/
+COPY dashboards/ /dashboards/
+COPY widgets/ /widgets/
+COPY jobs/ /jobs/
+COPY assets/ /assets/
+COPY public/ /public/
+COPY lib/ /lib-smashing/
 
 VOLUME ["/dashboards", "/jobs", "/lib-smashing", "/config", "/public", "/widgets", "/assets"]
 
-RUN echo "original Gemfile"
-RUN cat Gemfile
-RUN sed -i -e '$a\' Gemfile
-RUN echo "gem 'json'" >> Gemfile
-RUN echo "updated Gemfile"
-RUN cat Gemfile
+#RUN echo "original Gemfile"
+#RUN cat Gemfile
+#RUN sed -i -e '$a\' Gemfile
+#RUN echo "gem 'json'" >> Gemfile
+#RUN echo "updated Gemfile"
+#RUN cat Gemfile
 RUN bundle install
-RUN smashing install fd453f2c31a9d0131c52
 
 ENV PORT 3030
 EXPOSE $PORT
