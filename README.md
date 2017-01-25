@@ -5,7 +5,7 @@ Based on Smashing Alpine Container - https://hub.docker.com/r/rgcamus/alpine_sma
 
 ## Build (optional)
 
-```git clone https://github.com/keithmcclellan/smashing-on-dcos```
+```git clone https://github.com/keith-mcclellan/smashing-on-dcos```
 
 ```cd smashing-on-dcos```
 
