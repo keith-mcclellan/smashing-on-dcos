@@ -19,7 +19,7 @@
   "maxLaunchDelaySeconds": 3600,
   "container": {
     "docker": {
-      "image": "keithmcclellan/smashing_on_dcos”,
+      "image": "keithmcclellan/smashing_on_dcos",
       "forcePullImage": true,
       "privileged": false,
       "network": "HOST"
